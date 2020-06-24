@@ -1,3 +1,6 @@
+/**
+ * Google API authentication configurations
+ */
 export default {
   projectId: 'ga-hit-count',
   privateKey: process.env.PRIVATE_KEY,

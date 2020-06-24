@@ -2,6 +2,9 @@ import { NowRequest, NowResponse } from '@vercel/node'
 import { google } from 'googleapis'
 import config from './config'
 
+/**
+ * Blog hit count. Served by Google Analytics
+ */
 export default async (req: NowRequest, resp: NowResponse) => {
   // API query page parameter
   const { page = '' } = req.query
