@@ -83,5 +83,6 @@ export default async (req: NowRequest, resp: NowResponse) => {
     })
   }
 
+  resp.setHeader('Access-Control-Allow-Origin', '*')
   resp.status(200).send(res)
 }
