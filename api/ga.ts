@@ -12,7 +12,7 @@ export default async (req: NowRequest, resp: NowResponse) => {
   // page path filter
   const filter =
     page === ''
-      ? { dimensionName: 'ga:pagePath', operator: 'BEGINS_WITH', expressions: ['/20'] }
+      ? { dimensionName: 'ga:pagePath', operator: 'BEGINS_WITH', expressions: config.allFilter }
       : {
           dimensionName: 'ga:pagePath',
           operator: 'EXACT',
@@ -21,10 +21,10 @@ export default async (req: NowRequest, resp: NowResponse) => {
 
   const auth = new google.auth.GoogleAuth({
     credentials: {
-      private_key: config.privateKey,
-      client_email: config.clientEmail,
+      private_key: config.auth.privateKey,
+      client_email: config.auth.clientEmail,
     },
-    projectId: config.projectId,
+    projectId: config.auth.projectId,
     scopes: 'https://www.googleapis.com/auth/analytics.readonly',
   })
   const client = await auth.getClient()
@@ -37,10 +37,10 @@ export default async (req: NowRequest, resp: NowResponse) => {
     requestBody: {
       reportRequests: [
         {
-          viewId: '205703100',
+          viewId: config.viewId,
           dateRanges: [
             {
-              startDate: '2010-01-01',
+              startDate: config.startDate,
               endDate: 'today',
             },
           ],
