@@ -1,4 +1,4 @@
-# 📊 ga-hit-count-serverless
+# 🍐 ga-hit-count-serverless
 
 > Google Analytics hit count API for static websites. Deployed on Vercel.
 
@@ -16,7 +16,7 @@ First, fork this project to your own GitHub account.
 
 Second, acquire a Google API credential file following the procedure explained here: [Analytics Reporting API v4 - Enable the API](https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/service-py#1_enable_the_api). You will get a JSON credential which looks like:
 
-```json
+```jsonc
 {
   // ...
   "project_id": "ga-hit-count",
@@ -73,7 +73,7 @@ Request:
 
 Response demo:
 
-```
+```jsonc
 [
   {
     "page": "/2019/11/tiny-tiny-rss/",
@@ -107,7 +107,7 @@ Request demo:
 
 Response demo:
 
-```
+```jsonc
 [
   {
     "page": "/2020/03/substats/",
@@ -118,7 +118,7 @@ Response demo:
 
 ---
 
-**📊 GA Hit Count API for Vercel** ©Spencer Woo. Released under the [MIT License](LICENSE).
+**🍐 GA Hit Count API for Vercel** ©Spencer Woo. Released under the [MIT License](LICENSE).
 
 Authored and maintained by Spencer Woo.
 
