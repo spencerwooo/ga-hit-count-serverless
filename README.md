@@ -2,7 +2,7 @@
 
 > Google Analytics hit count API for static websites. Deployed on Vercel.
 
-<!-- **详细说明：**[Hit count：用 Google Analytics + Vercel Serverless 为文章添加浏览量统计](https://blog.spencerwoo.com/2020/06/serverless-ga-hit-count-api/) -->
+**中文说明：**[Hit count：用 Google Analytics + Vercel Serverless 为文章添加浏览量统计](https://blog.spencerwoo.com/2020/06/serverless-ga-hit-count-api/)
 
 ## See it in action
 
